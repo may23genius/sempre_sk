@@ -168,7 +168,7 @@ tailscale status   # find your machine hostname
 }
 ```
 
-> `GATEWAY_ORIGIN_EXTRA` (Tailscale CORS origin) is derived automatically from these two fields — no need to set it separately.
+> `GATEWAY_ORIGIN_EXTRA` (Tailscale CORS origin) is derived automatically from these two fields — no need to set it separately. tailscale of wsl/ubuntu/docker
 
 #### n8n secrets
 
@@ -400,7 +400,7 @@ The SSL cert is shared — set `disks.ssl` in both teams to the same path.
 | `agents[].discord_token` | Discord bot token | — |
 | `agents[].github_token` | GitHub Personal Access Token (repo + read:org) | — |
 | `disks.*` | Host paths for mounted volumes | ✓ |
-| `tailscale_hostname` | Tailscale machine hostname | ✓ |
+| `tailscale_hostname` | Tailscale machine hostname (running wsl/ubuntu/docker)| ✓ |
 | `nginx.*_port` | Exposed ports for each service | ✓ |
 | `openclaw.gateway_token` | Web UI auth (`openssl rand -hex 32`) | ✓ |
 | `openclaw.root_password` | SSH password | — |
