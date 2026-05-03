@@ -483,6 +483,7 @@ Open `disks/km/` in [Obsidian](https://obsidian.md) to browse the knowledge grap
 | your Tailscale account does not support getting TLS certs | go to https://login.tailscale.com/admin/dns and enable 'MagicDNS' and 'HTTPS Certificate'
 | jq command not found | sudo apt update && sudo apt install jq
 | scripts/generate.sh: line 13: $'\r': command not found when run make up | check config.json and reset scripts/generate.sh then type make generate then run make up again
+| exec entrypoint.sh no such file or directory docker windows | open dockerfile and entrypoint.sh, click the last line if CRLF then EOL converstion to LF format (click at the bottom right of antigravity and switch to LF)
 ---
 
 Built on [OpenClaw](https://openclaw.ai) · Powered by [Ollama](https://ollama.com) · MIT License
