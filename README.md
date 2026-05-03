@@ -310,7 +310,7 @@ docker restart sempre-ollama
 | **Ollama API** | `https://{tailscale_hostname}:{nginx.ollama_port}` | — |
 | **n8n** | `https://{tailscale_hostname}:{nginx.n8n_port}` | `admin@local` / `n8n.password` |
 | **SSH** | `ssh root@localhost -p 2222` | `openclaw.root_password` |
-
+| sudo tailscale serve https+insecure://localhost:20443 | https://{tailscale_hostname}.{Tailnet DNS name}/ for example: https://abchost.tailc4bdxx.ts.net
 ---
 
 ## Makefile Reference
