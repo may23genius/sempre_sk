@@ -480,6 +480,8 @@ Open `disks/km/` in [Obsidian](https://obsidian.md) to browse the knowledge grap
 | Browser-use `CDP not initialized` | `docker restart browser-use-{id}` — recovers automatically |
 | KM search returns nothing | Drop `.md` files into `disks/km/` — nomic-embed-text indexes on first query |
 | Compose override missing | `make generate` |
+| your Tailscale account does not support getting TLS certs | go to https://login.tailscale.com/admin/dns and enable 'MagicDNS' and 'HTTPS Certificate'
+| jq command not found | sudo apt update && sudo apt install jq
 
 ---
 
