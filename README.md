@@ -159,6 +159,8 @@ tailscale status   # find your machine hostname
 ```
 
 ```json
+#Importance "your-machine.tailnet.ts.net" must be the host that running make up or compose docker container
+#for example if main host is window {window-machine.tailnet.ts.net" and running make up inside wsl which is {wsl-machine.tailnet.ts.net} => we need to use {wsl-machine.tailnet.ts.net} patter
 "tailscale_hostname": "your-machine.tailnet.ts.net",
 "nginx": {
     "openclaw_port": 20443,
