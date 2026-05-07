@@ -465,6 +465,54 @@ Open `disks/km/` in [Obsidian](https://obsidian.md) to browse the knowledge grap
 
 ---
 
+### Tailscale usecase
+# Serve a file, directory, or plain text:
+
+$ tailscale serve /path/to/file.html
+$ tailscale funnel /path/to/directory
+$ tailscale serve text:"hello from tailscale"
+
+# Start an HTTPS reverse proxy to port 3000
+
+$ tailscale serve 3000
+$ tailscale funnel localhost:3000
+$ tailscale serve http://localhost:3000
+$ tailscale funnel http://127.0.0.1:3000
+
+# The same, but at a path
+
+$ tailscale serve localhost:3000/foo
+$ tailscale funnel http://localhost:3000/foo
+$ tailscale serve http://127.0.0.1:3000/foo
+
+# The same, but listen on alternate port 8443
+
+$ tailscale serve --https=8443 3000
+$ tailscale funnel --https=8443 3000
+
+# Run Funnel or Serve in the background
+
+$ tailscale serve --bg 3000
+$ taiscale funnel --bg 3000
+
+# Specify a multiple mount point- all of these can be active at the same time
+
+$ tailscale serve --set-path=/ --bg 3000
+$ tailscale funnel --set-path=/foo --bg localhost:5000
+$ tailscale serve --set-path=/bar --bg /path/to/file.html
+
+# Ignore an invalid or self-signed certificate
+
+$ tailscale serve https+insecure://localhost:5454
+$ tailscale funnel https+insecure://localhost:5454
+
+# Forward incoming TCP connections on port 10000 to a local TCP server on port 22
+# (eg.g to run OpenSSH in parallel with Tailscale SSH):
+
+$ tailscale serve --tcp=2222 22
+$ tailscale serve --tcp=2222 tcp://localhost:22
+
+
 ## Troubleshooting
 
 | Problem | Fix |
