@@ -3,6 +3,8 @@
 # ============================================================
 FROM nginx:alpine
 
+ENV TZ=Asia/Bangkok
+
 # gettext provides envsubst for template substitution
 RUN apk add --no-cache gettext
 
