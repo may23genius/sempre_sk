@@ -5,6 +5,8 @@ FROM ubuntu:24.04
 
 ARG DEBIAN_FRONTEND=noninteractive
 
+ENV TZ=Asia/Bangkok
+
 # ---- Base packages + SSH server ----
 RUN apt-get update && apt-get install -y --no-install-recommends \
     openssh-server \
