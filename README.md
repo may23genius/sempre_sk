@@ -1,4 +1,5 @@
 # sempre
+ref video: https://www.youtube.com/watch?v=pR2F6y_Vz6I
 
 > *Sempre* — Italian for "always". Your AI team is always on, always working, always learning.
 
